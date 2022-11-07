@@ -1,0 +1,30 @@
+@media(max-width:991px){
+   
+    .navbar-toggler span{
+        color: var(--white-color);
+        line-height: 2rem;
+        background-color: #fff;
+    }
+   
+    .navigation-wrap{
+        text-align: right;
+        background-color:  var(--black-color);
+    }
+
+    .navigation-wrap .nav-link{
+        line-height: 1.875rem;
+    }
+   
+    #home{
+        padding: 4.374rem 0 0;
+    }
+
+   
+}
+
+@media(max-width:598px){
+   
+    .top_header{
+        display: none;
+    }
+}

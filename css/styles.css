@@ -1,0 +1,227 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Variable define */
+:root {
+    --primary-color: orange;
+    --secondary-color: brown;
+    --white-color: white;
+    --black-color: black;
+}
+
+body {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+/* customize scrollbar */
+::-webkit-scrollbar {
+    width: 0.3125rem;
+}
+
+::-webkit-scrollbar-track {
+    color: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.5625rem;
+    font-weight: 600;
+    color: var(--white-color);
+    text-transform: capitalize;
+    line-height: 2.5rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 0.9375rem;
+    color: var(--white-color);
+    text-transform: capitalize;
+    transition: all .3s linear;
+}
+
+h5 {
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--white-color);
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--white-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 0.0625rem;
+}
+
+.main_btn {
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.125rem;
+    display: inline-block;
+    color: var(--white-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 30px;
+    position: relative;
+}
+
+.main_btn::after,
+.main_btn::before {
+    position: absolute;
+    top: 50%;
+    background-color: rgb(255, 255, 255, .3);
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: "";
+    transition: all .5s ease-out 0s;
+    transform: translateY(-20px);
+}
+
+.main_btn::after {
+    transform: translateY(20px);
+}
+
+.main_btn:hover::after {
+    transform: rotate(-20deg);
+    color: var(--primary-color);
+}
+
+.main_btn:hover::before {
+    transform: rotate(20deg);
+    color: var(--primary-color);
+}
+
+.main_btn:hover {
+    color: var(--primary-color) !important;
+}
+
+.wrapper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: var(--secondary-color);
+}
+
+.text_content {
+    width: 60%;
+    margin: auto;
+}
+
+/* header design */
+.top_header {
+    background-color: var(--secondary-color);
+
+}
+
+.top_header span {
+    font-size: 0.87rem;
+    color: var(--white-color);
+    letter-spacing: 0.1062rem;
+}
+
+.navigation-wrap {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+}
+
+.navigation-wrap .nav-item {
+    padding: 0 0.5rem;
+    transition: all 200ms linear;
+}
+
+.navbar-toggler:focus {
+    outline: unset;
+    border: none;
+    box-shadow: none;
+}
+
+.navigation-wrap .nav-link {
+    padding-top: 0.9375rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-color);
+    letter-spacing: 0.0255rem;
+}
+
+.navigation-wrap .nav-link:hover,
+.navigation-wrap .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* on scroll nav styling */
+.navigation-wrap.scroll.on {
+    position: fixed;
+    background-color: var(--black-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0.125rem 1.75rem 1 black;
+    transition: all .5s ease-in-out 0s;
+}
+
+.navigation-wrap.scroll.on .nav-link:hover,
+.navigation-wrap.scroll.on .nav-link.active {
+    color: var(--primary-color);
+}
+/* .navbar-toggler{
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+}
+ */
+/* .navbar-toggler span {
+    background-color: #fff;
+    color: rgb(3, 2, 5);
+}
+ */
